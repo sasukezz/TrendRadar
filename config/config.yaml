@@ -24,27 +24,27 @@ app:
 # name: 显示名称（可自定义，修改后不影响运行）
 # ===============================================================
 platforms:
-  - id: "toutiao"
+ # - id: "toutiao"
     name: "今日头条"
-  - id: "baidu"
+ # - id: "baidu"
     name: "百度热搜"
-  - id: "wallstreetcn-hot"
+ # - id: "wallstreetcn-hot"
     name: "华尔街见闻"
-  - id: "thepaper"
+ # - id: "thepaper"
     name: "澎湃新闻"
   - id: "bilibili-hot-search"
     name: "bilibili 热搜"
-  - id: "cls-hot"
+ # - id: "cls-hot"
     name: "财联社热门"
-  - id: "ifeng"
+ # - id: "ifeng"
     name: "凤凰网"
-  - id: "tieba"
+ # - id: "tieba"
     name: "贴吧"
   - id: "weibo"
     name: "微博"
   - id: "douyin"
     name: "抖音"
-  - id: "zhihu"
+ # - id: "zhihu"
     name: "知乎"
 
 
@@ -57,7 +57,7 @@ platforms:
 # max_age_days: 可选，覆盖全局 freshness_filter.max_age_days
 # ===============================================================
 rss:
-  enabled: true                       # 是否启用 RSS 抓取
+  enabled: false                      # 是否启用 RSS 抓取
 
   # 文章新鲜度过滤配置（全局默认值）
   # 过滤掉发布时间超过指定天数的旧文章，避免同一篇文章重复出现在推送中
@@ -175,8 +175,8 @@ notification:
   #   - RSS 源内容较少，希望全部展示而非只显示关键词匹配的
   # 注意：同一新闻可能同时出现在关键词匹配区和独立展示区
   standalone_display:
-    enabled: false                    # 是否启用独立展示区
-    platforms: []                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    enabled: true                    # 是否启用独立展示区
+    platforms: ["weibo","douyin","bilibili-hot-search"]                     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
     rss_feeds: []                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 20                     # 每个源最多展示条数（0=不限制）
 
